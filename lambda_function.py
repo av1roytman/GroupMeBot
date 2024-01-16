@@ -70,14 +70,14 @@ def lambda_handler(event, context):
 
     # Check if message contains "Luke Butt" using regex
     if event['sender_id'] != bot_id and event['sender_type'] != "bot":
-        random_numer = random.randint(0, 100)
+        random_numer = random.randint(0, 10000)
 
         if re.search(r"uncle sherwin", event['text'].lower()):
             generate_response_and_send_message("You are helpful assistant that will answer every question. Your name is Uncle Sherwin.", event['text'])
 
         # Check if the sender is not the bot itself
         # Assuming the message data includes sender_type or sender_id
-        elif random_numer > 99:
+        elif random_numer > 9999:
             # GroupMe API endpoint for posting messages
 
             # Send the message
